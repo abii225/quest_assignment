@@ -18,7 +18,12 @@ const Homepage = () => {
   useEffect(() => {}, [todo]);
   return (
     <div className="py-[50px]">
-    
+      <div className="w-[95%]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto ">
+        <Alltodo alltodo={todo} setTodo={setTodo} />
+        <Progress progress={todo} setTodo={setTodo} />
+        <Review review={todo} setTodo={setTodo} />
+        <Completed completed={todo} setTodo={setTodo} />
+      </div>
     </div>
   );
 };
